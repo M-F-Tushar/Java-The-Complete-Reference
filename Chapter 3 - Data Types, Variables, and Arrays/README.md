@@ -1,4 +1,3 @@
-```markdown
 # Chapter 3: Data Types, Variables, and Arrays in Java
 
 This chapter explores three foundational elements of Java programming: **data types**, **variables**, and **arrays**. These components are critical for building robust and efficient Java programs. Java’s approach ensures type safety, efficiency, and portability across platforms. This document organizes the content in a structured format, including explanations, examples, and exercises to reinforce understanding.
@@ -109,44 +108,58 @@ class Light {
         System.out.println(distance + " miles.");
     }
 }
-```
 
-**Output**:
-```
+Output:
 In 1000 days light will travel about 16070400000000 miles.
-```
 
-**Explanation**:
-- `long` is used for `days`, `seconds`, and `distance` to handle large values.
-- The program calculates distance by multiplying the speed of light by seconds in 1000 days.
+Explanation:
 
-#### Exercise
-1. Modify the `Light` program to calculate the distance light travels in **one year** (365 days). Use appropriate variable types and print the result.
+long is used for days, seconds, and distance to handle large values.
+The program calculates distance by multiplying the speed of light by seconds in 1000 days.
 
----
+Exercise
 
-### 2.2 Floating-Point Types
-Floating-point types handle numbers with fractional components, adhering to the **IEEE-754** standard. They are used for precise calculations, such as mathematical functions.
+Modify the Light program to calculate the distance light travels in one year (365 days). Use appropriate variable types and print the result.
 
-#### Floating-Point Types and Ranges
-| Type    | Width (Bits) | Approximate Range          |
-|---------|--------------|----------------------------|
-| `float` | 32           | 1.4e–045 to 3.4e+038       |
-| `double`| 64           | 4.9e–324 to 1.8e+308       |
 
-#### Detailed Explanation
-- **`float`**:
-  - Single-precision, faster but less precise for very large/small values.
-  - Useful for applications like currency.
-  - Example: `float hightemp, lowtemp;`
-- **`double`**:
-  - Double-precision, preferred for high-precision calculations (e.g., `sin()`, `cos()`, `sqrt()`).
-  - Example: `double pi, radius, area;`
+2.2 Floating-Point Types
+Floating-point types handle numbers with fractional components, adhering to the IEEE-754 standard. They are used for precise calculations, such as mathematical functions.
+Floating-Point Types and Ranges
 
-#### Example: Compute the Area of a Circle
-This program uses `double` to compute the area of a circle given its radius.
 
-```java
+
+Type
+Width (Bits)
+Approximate Range
+
+
+
+float
+32
+1.4e–045 to 3.4e+038
+
+
+double
+64
+4.9e–324 to 1.8e+308
+
+
+Detailed Explanation
+
+float:
+Single-precision, faster but less precise for very large/small values.
+Useful for applications like currency.
+Example: float hightemp, lowtemp;
+
+
+double:
+Double-precision, preferred for high-precision calculations (e.g., sin(), cos(), sqrt()).
+Example: double pi, radius, area;
+
+
+
+Example: Compute the Area of a Circle
+This program uses double to compute the area of a circle given its radius.
 class Area {
     public static void main(String[] args) {
         double pi, r, a;
@@ -158,34 +171,30 @@ class Area {
         System.out.println("Area of circle is " + a);
     }
 }
-```
 
-**Output**:
-```
+Output:
 Area of circle is 366.995904
-```
 
-**Explanation**:
-- `double` variables handle fractional values.
-- The area is calculated using `π * r²`.
+Explanation:
 
-#### Exercise
-1. Modify the `Area` program to calculate the area of a circle with radius **5.5** using `float`. Compare the precision with `double`.
+double variables handle fractional values.
+The area is calculated using π * r².
 
----
+Exercise
 
-### 2.3 Characters
-The `char` type stores characters using **Unicode** (16-bit, range: 0 to 65,535), supporting all human languages. Java uses Unicode for global portability.
+Modify the Area program to calculate the area of a circle with radius 5.5 using float. Compare the precision with double.
 
-#### Key Points
-- No negative values.
-- Represents ASCII characters (e.g., `'X'` is 88).
-- Supports arithmetic operations.
 
-#### Example: Demonstrating `char` Variables
-This program assigns ASCII values and character literals to `char` variables.
+2.3 Characters
+The char type stores characters using Unicode (16-bit, range: 0 to 65,535), supporting all human languages. Java uses Unicode for global portability.
+Key Points
 
-```java
+No negative values.
+Represents ASCII characters (e.g., 'X' is 88).
+Supports arithmetic operations.
+
+Example: Demonstrating char Variables
+This program assigns ASCII values and character literals to char variables.
 class CharDemo {
     public static void main(String[] args) {
         char ch1, ch2;
@@ -197,21 +206,17 @@ class CharDemo {
         System.out.println(ch1 + " " + ch2);
     }
 }
-```
 
-**Output**:
-```
+Output:
 ch1 and ch2: X Y
-```
 
-**Explanation**:
-- `ch1` is assigned ASCII 88 (`'X'`).
-- `ch2` is assigned `'Y'`.
+Explanation:
 
-#### Example: `char` as an Integer Type
-This program shows `char` in arithmetic operations.
+ch1 is assigned ASCII 88 ('X').
+ch2 is assigned 'Y'.
 
-```java
+Example: char as an Integer Type
+This program shows char in arithmetic operations.
 class CharDemo2 {
     public static void main(String[] args) {
         char ch1;
@@ -223,33 +228,29 @@ class CharDemo2 {
         System.out.println("ch1 is now " + ch1);
     }
 }
-```
 
-**Output**:
-```
+Output:
 ch1 contains X
 ch1 is now Y
-```
 
-**Explanation**:
-- `ch1` starts as `'X'` (ASCII 88) and increments to `'Y'` (ASCII 89).
+Explanation:
 
-#### Exercise
-1. Write a program that assigns `'A'` to a `char` variable and increments it five times. Print the final character.
+ch1 starts as 'X' (ASCII 88) and increments to 'Y' (ASCII 89).
 
----
+Exercise
 
-### 2.4 Booleans
-The `boolean` type represents `true` or `false`, used in conditional expressions and relational operators.
+Write a program that assigns 'A' to a char variable and increments it five times. Print the final character.
 
-#### Key Points
-- Only accepts `true` or `false` (not 1 or 0).
-- Directly controls conditionals without comparison to `true`.
 
-#### Example: Demonstrating `boolean`
-This program shows `boolean` in conditionals and relational operations.
+2.4 Booleans
+The boolean type represents true or false, used in conditional expressions and relational operators.
+Key Points
 
-```java
+Only accepts true or false (not 1 or 0).
+Directly controls conditionals without comparison to true.
+
+Example: Demonstrating boolean
+This program shows boolean in conditionals and relational operations.
 class BoolTest {
     public static void main(String[] args) {
         boolean b;
@@ -267,163 +268,182 @@ class BoolTest {
         System.out.println("10 > 9 is " + (10 > 9));
     }
 }
-```
 
-**Output**:
-```
+Output:
 b is false
 b is true
 This is executed.
 10 > 9 is true
-```
 
-**Explanation**:
-- `b` toggles between `false` and `true`.
-- The `if` statement executes only when `b` is `true`.
-- `10 > 9` evaluates to `true`.
+Explanation:
 
-#### Exercise
-1. Write a program that checks if 42 is even using a `boolean` variable.
+b toggles between false and true.
+The if statement executes only when b is true.
+10 > 9 evaluates to true.
 
----
+Exercise
 
-## 3. A Closer Look at Literals
+Write a program that checks if 42 is even using a boolean variable.
 
-Literals are fixed values in source code (e.g., `42`, `3.14`, `'a'`).
 
-### 3.1 Integer Literals
+3. A Closer Look at Literals
+Literals are fixed values in source code (e.g., 42, 3.14, 'a').
+3.1 Integer Literals
 Represent whole numbers in:
-- **Decimal**: `42`
-- **Octal**: `052` (starts with `0`)
-- **Hexadecimal**: `0x2A` (starts with `0x` or `0X`)
-- **Binary**: `0b1010` (starts with `0b` or `0B`)
 
-#### Key Points
-- Default to `int`; append `L` for `long` (e.g., `9223372036854775807L`).
-- Underscores improve readability (e.g., `123_456_789`).
-- Binary literals are useful for bitmasks.
+Decimal: 42
+Octal: 052 (starts with 0)
+Hexadecimal: 0x2A (starts with 0x or 0X)
+Binary: 0b1010 (starts with 0b or 0B)
 
-#### Example
-```java
+Key Points
+
+Default to int; append L for long (e.g., 9223372036854775807L).
+Underscores improve readability (e.g., 123_456_789).
+Binary literals are useful for bitmasks.
+
+Example
 int dec = 42;         // Decimal
 int oct = 052;        // Octal (42 in decimal)
 int hex = 0x2A;       // Hexadecimal (42 in decimal)
 int bin = 0b1010;     // Binary (10 in decimal)
 long big = 123_456_789L;
-```
 
----
 
-### 3.2 Floating-Point Literals
+3.2 Floating-Point Literals
 Represent numbers with fractional components in:
-- **Standard notation**: `3.14159`
-- **Scientific notation**: `6.022E23`
-- **Hexadecimal notation**: `0x12.2P2` (rare, represents 72.5)
 
-#### Key Points
-- Default to `double`; append `F` for `float`.
-- Underscores improve readability.
+Standard notation: 3.14159
+Scientific notation: 6.022E23
+Hexadecimal notation: 0x12.2P2 (rare, represents 72.5)
 
-#### Example
-```java
+Key Points
+
+Default to double; append F for float.
+Underscores improve readability.
+
+Example
 double d = 3.14159;
 float f = 3.14f;
 double sci = 6.022E23;
 double hexFloat = 0x12.2P2; // 72.5
-```
 
----
 
-### 3.3 Boolean Literals
-- Only `true` and `false`.
-- Cannot be converted to numeric values.
+3.3 Boolean Literals
 
-#### Example
-```java
+Only true and false.
+Cannot be converted to numeric values.
+
+Example
 boolean flag = true;
-```
 
----
 
-### 3.4 Character Literals
+3.4 Character Literals
 Characters are enclosed in single quotes, supporting:
-- ASCII: `'a'`, `'@'`
-- Escape sequences: `'\n'`, `'\''`
-- Octal: `'\141'` (`'a'`)
-- Unicode: `'\u0061'` (`'a'`)
 
-#### Table 3-1: Character Escape Sequences
-| Escape Sequence | Description                     |
-|-----------------|-------------------------------|
-| `\ddd`          | Octal character (ddd)         |
-| `\uxxxx`        | Hexadecimal Unicode (xxxx)    |
-| `\'`            | Single quote                  |
-| `\"`            | Double quote                  |
-| `\\`            | Backslash                     |
-| `\r`            | Carriage return               |
-| `\n`            | New line                      |
-| `\f`            | Form feed                     |
-| `\t`            | Tab                           |
-| `\b`            | Backspace                     |
-| `\s`            | Space (JDK 15+)               |
-| `\endofline`    | Line continuation (JDK 15+, for text blocks) |
+ASCII: 'a', '@'
+Escape sequences: '\n', '\''
+Octal: '\141' ('a')
+Unicode: '\u0061' ('a')
 
-#### Example
-```java
+Table 3-1: Character Escape Sequences
+
+
+
+Escape Sequence
+Description
+
+
+
+\ddd
+Octal character (ddd)
+
+
+\uxxxx
+Hexadecimal Unicode (xxxx)
+
+
+\'
+Single quote
+
+
+\"
+Double quote
+
+
+\\
+Backslash
+
+
+\r
+Carriage return
+
+
+\n
+New line
+
+
+\f
+Form feed
+
+
+\t
+Tab
+
+
+\b
+Backspace
+
+
+\s
+Space (JDK 15+)
+
+
+\endofline
+Line continuation (JDK 15+, for text blocks)
+
+
+Example
 char a = 'a';
 char newline = '\n';
 char unicode = '\u0061'; // 'a'
-```
 
----
 
-### 3.5 String Literals
-Strings are `String` objects enclosed in double quotes (e.g., `"Hello"`).
+3.5 String Literals
+Strings are String objects enclosed in double quotes (e.g., "Hello").
+Key Points
 
-#### Key Points
-- Support escape sequences.
-- Must be on one line (text blocks in JDK 15+ allow multi-line).
+Support escape sequences.
+Must be on one line (text blocks in JDK 15+ allow multi-line).
 
-#### Example
-```java
+Example
 String s1 = "Hello World";
 String s2 = "two\nlines";
 String s3 = "\"This is in quotes\"";
-```
 
----
 
-### Exercise
-1. Declare variables for each literal type with underscores and escape sequences. Print their values.
+Exercise
 
----
+Declare variables for each literal type with underscores and escape sequences. Print their values.
 
-## 4. Variables
 
-A **variable** is the basic storage unit, defined by an **identifier**, **type**, and optional **initializer**. Variables have **scope** and **lifetime**.
-
-### 4.1 Declaring a Variable
+4. Variables
+A variable is the basic storage unit, defined by an identifier, type, and optional initializer. Variables have scope and lifetime.
+4.1 Declaring a Variable
 Syntax:
-```java
 type identifier [= value][, identifier [= value] …];
-```
 
-#### Examples
-```java
+Examples
 int a, b, c;
 int d = 3, e, f = 5;
 byte z = 22;
 double pi = 3.14159;
 char x = 'x';
-```
 
----
 
-### 4.2 Dynamic Initialization
+4.2 Dynamic Initialization
 Variables can be initialized with expressions, including method calls.
-
-#### Example: Hypotenuse of a Right Triangle
-```java
+Example: Hypotenuse of a Right Triangle
 class DynInit {
     public static void main(String[] args) {
         double a = 3.0, b = 4.0;
@@ -432,28 +452,26 @@ class DynInit {
         System.out.println("Hypotenuse is " + c);
     }
 }
-```
 
-**Output**:
-```
+Output:
 Hypotenuse is 5.0
-```
 
-**Explanation**:
-- `c` is initialized using the Pythagorean theorem.
+Explanation:
 
-#### Exercise
-1. Compute the volume of a sphere with radius 5 using dynamic initialization.
+c is initialized using the Pythagorean theorem.
 
----
+Exercise
 
-### 4.3 Scope and Lifetime of Variables
-- **Scope**: Defines visibility, determined by blocks (`{}`).
-- **Lifetime**: Variables are created on scope entry and destroyed on exit.
-- **Nested Scopes**: Inner scopes access outer scope variables, not vice versa.
+Compute the volume of a sphere with radius 5 using dynamic initialization.
 
-#### Example: Block Scope
-```java
+
+4.3 Scope and Lifetime of Variables
+
+Scope: Defines visibility, determined by blocks ({}).
+Lifetime: Variables are created on scope entry and destroyed on exit.
+Nested Scopes: Inner scopes access outer scope variables, not vice versa.
+
+Example: Block Scope
 class Scope {
     public static void main(String[] args) {
         int x = 10;
@@ -466,16 +484,12 @@ class Scope {
         System.out.println("x is " + x);
     }
 }
-```
 
-**Output**:
-```
+Output:
 x and y: 10 20
 x is 40
-```
 
-#### Example: Variable Lifetime
-```java
+Example: Variable Lifetime
 class LifeTime {
     public static void main(String[] args) {
         for (int x = 0; x < 3; x++) {
@@ -486,46 +500,39 @@ class LifeTime {
         }
     }
 }
-```
 
-**Output**:
-```
+Output:
 y is: -1
 y is now: 100
 y is: -1
 y is now: 100
 y is: -1
 y is now: 100
-```
 
-#### Exercise
-1. Write a program with a `for` loop that reinitializes a variable each iteration and attempts to access it outside the loop.
+Exercise
 
----
+Write a program with a for loop that reinitializes a variable each iteration and attempts to access it outside the loop.
 
-## 5. Type Conversion and Casting
 
-Java supports **automatic conversions** for compatible types and **explicit casting** for incompatible types.
-
-### 5.1 Java’s Automatic Conversions
+5. Type Conversion and Casting
+Java supports automatic conversions for compatible types and explicit casting for incompatible types.
+5.1 Java’s Automatic Conversions
 Occur when:
-- Types are compatible.
-- Destination type is larger (widening conversion).
 
-#### Examples
-- `int` to `long`: No cast needed.
-- Numeric to `char`/`boolean`: Not allowed.
+Types are compatible.
+Destination type is larger (widening conversion).
 
----
+Examples
 
-### 5.2 Casting Incompatible Types
+int to long: No cast needed.
+Numeric to char/boolean: Not allowed.
+
+
+5.2 Casting Incompatible Types
 Syntax:
-```java
 (target-type) value
-```
 
-#### Example: Demonstrating Casts
-```java
+Example: Demonstrating Casts
 class Conversion {
     public static void main(String[] args) {
         byte b;
@@ -542,34 +549,32 @@ class Conversion {
         System.out.println("d and b " + d + " " + b);
     }
 }
-```
 
-**Output**:
-```
+Output:
 i and b 257 1
 d and i 323.142 323
 d and b 323.142 67
-```
 
-**Explanation**:
-- `int` to `byte`: Reduced modulo 256 (257 % 256 = 1).
-- `double` to `int`: Truncated to 323.
-- `double` to `byte`: Truncated and reduced modulo 256 (323 % 256 = 67).
+Explanation:
 
-#### Exercise
-1. Cast `1234.5678` to `int` and `byte`. Explain data loss.
+int to byte: Reduced modulo 256 (257 % 256 = 1).
+double to int: Truncated to 323.
+double to byte: Truncated and reduced modulo 256 (323 % 256 = 67).
 
----
+Exercise
 
-### 5.3 Automatic Type Promotion in Expressions
+Cast 1234.5678 to int and byte. Explain data loss.
+
+
+5.3 Automatic Type Promotion in Expressions
 Rules:
-- `byte`, `short`, `char` → `int`
-- If `long` operand, expression → `long`
-- If `float` operand, expression → `float`
-- If `double` operand, expression → `double`
 
-#### Example: Type Promotion
-```java
+byte, short, char → int
+If long operand, expression → long
+If float operand, expression → float
+If double operand, expression → double
+
+Example: Type Promotion
 class Promote {
     public static void main(String[] args) {
         byte b = 42;
@@ -584,37 +589,30 @@ class Promote {
         System.out.println("result = " + result);
     }
 }
-```
 
-**Output**:
-```
+Output:
 238.14 + 515 - 126.3616
 result = 626.7784
-```
 
-**Explanation**:
-- `f * b`: `b` → `float`
-- `i / c`: `c` → `int`
-- `d * s`: `s` → `double`
-- Final: `(float + int) - double` → `double`
+Explanation:
 
-#### Exercise
-1. Evaluate `(byte)10 * (short)20 / (char)'a'`. Explain type promotions.
+f * b: b → float
+i / c: c → int
+d * s: s → double
+Final: (float + int) - double → double
 
----
+Exercise
 
-## 6. Arrays
+Evaluate (byte)10 * (short)20 / (char)'a'. Explain type promotions.
 
-An **array** is a collection of same-type variables accessed by index (starting at 0).
 
-### 6.1 One-Dimensional Arrays
+6. Arrays
+An array is a collection of same-type variables accessed by index (starting at 0).
+6.1 One-Dimensional Arrays
 Syntax:
-```java
 type[] var-name = new type[size];
-```
 
-#### Example: Days in Each Month
-```java
+Example: Days in Each Month
 class Array {
     public static void main(String[] args) {
         int[] month_days = new int[12];
@@ -634,30 +632,22 @@ class Array {
         System.out.println("April has " + month_days[3] + " days.");
     }
 }
-```
 
-**Output**:
-```
+Output:
 April has 30 days.
-```
 
-#### Example: Array Initialization
-```java
+Example: Array Initialization
 class AutoArray {
     public static void main(String[] args) {
         int[] month_days = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
         System.out.println("April has " + month_days[3] + " days.");
     }
 }
-```
 
-**Output**:
-```
+Output:
 April has 30 days.
-```
 
-#### Example: Average of Numbers
-```java
+Example: Average of Numbers
 class Average {
     public static void main(String[] args) {
         double[] nums = {10.1, 11.2, 12.3, 13.4, 14.5};
@@ -669,23 +659,18 @@ class Average {
         System.out.println("Average is " + result / 5);
     }
 }
-```
 
-**Output**:
-```
+Output:
 Average is 12.3
-```
 
-#### Exercise
-1. Create an array of 10 integers (1 to 10), compute their sum and average.
+Exercise
 
----
+Create an array of 10 integers (1 to 10), compute their sum and average.
 
-### 6.2 Multidimensional Arrays
+
+6.2 Multidimensional Arrays
 Multidimensional arrays are arrays of arrays.
-
-#### Example: Two-Dimensional Array
-```java
+Example: Two-Dimensional Array
 class TwoDArray {
     public static void main(String[] args) {
         int[][] twoD = new int[4][5];
@@ -704,18 +689,14 @@ class TwoDArray {
         }
     }
 }
-```
 
-**Output**:
-```
+Output:
 0 1 2 3 4
 5 6 7 8 9
 10 11 12 13 14
 15 16 17 18 19
-```
 
-#### Example: Irregular Multidimensional Array
-```java
+Example: Irregular Multidimensional Array
 class TwoDAgain {
     public static void main(String[] args) {
         int[][] twoD = new int[4][];
@@ -738,18 +719,14 @@ class TwoDAgain {
         }
     }
 }
-```
 
-**Output**:
-```
+Output:
 0
 1 2
 3 4 5
 6 7 8 9
-```
 
-#### Example: Initialized Two-Dimensional Array
-```java
+Example: Initialized Two-Dimensional Array
 class Matrix {
     public static void main(String[] args) {
         double[][] m = {
@@ -766,18 +743,14 @@ class Matrix {
         }
     }
 }
-```
 
-**Output**:
-```
+Output:
 0.0 0.0 0.0 0.0
 0.0 1.0 2.0 3.0
 0.0 2.0 4.0 6.0
 0.0 3.0 6.0 9.0
-```
 
-#### Example: Three-Dimensional Array
-```java
+Example: Three-Dimensional Array
 class ThreeDMatrix {
     public static void main(String[] args) {
         int[][][] threeD = new int[3][4][5];
@@ -797,10 +770,8 @@ class ThreeDMatrix {
         }
     }
 }
-```
 
-**Output**:
-```
+Output:
 0 0 0 0 0
 0 0 0 0 0
 0 0 0 0 0
@@ -815,38 +786,30 @@ class ThreeDMatrix {
 0 2 4 6 8
 0 4 8 12 16
 0 6 12 18 24
-```
 
-#### Exercise
-1. Create a 3×3 array initialized with the sum of row and column indices.
+Exercise
 
----
+Create a 3×3 array initialized with the sum of row and column indices.
 
-### 6.3 Alternative Array Declaration Syntax
+
+6.3 Alternative Array Declaration Syntax
 Syntax:
-```java
 type var-name[];
-```
 
-#### Examples
-```java
+Examples
 int al[] = new int[3];
 char twod1[][] = new char[3][4];
-```
 
----
 
-## 7. Introducing Type Inference with Local Variables
+7. Introducing Type Inference with Local Variables
+Since JDK 10, the var keyword allows type inference for local variables.
+Key Points
 
-Since **JDK 10**, the `var` keyword allows type inference for local variables.
+Syntax: var identifier = initializer;
+Requires initializer.
+Restricted to local variables.
 
-#### Key Points
-- Syntax: `var identifier = initializer;`
-- Requires initializer.
-- Restricted to local variables.
-
-#### Example: Local Variable Type Inference
-```java
+Example: Local Variable Type Inference
 class VarDemo {
     public static void main(String[] args) {
         var avg = 10.0; // Inferred as double
@@ -859,184 +822,166 @@ class VarDemo {
         System.out.println("Value of k: " + k);
     }
 }
-```
 
-**Output**:
-```
+Output:
 Value of avg: 10.0
 Value of var: 1
 Value of k: -1
-```
 
-#### Exercise
-1. Use `var` to declare a `double` array and compute its sum.
+Exercise
 
----
+Use var to declare a double array and compute its sum.
 
-## 8. A Few Words About Strings
 
-`String` is an object, not a primitive type.
-
-#### Examples
-```java
+8. A Few Words About Strings
+String is an object, not a primitive type.
+Examples
 String str = "Hello";
 System.out.println(str);
-```
 
----
 
-## 9. Exercises
+9. Exercises
 
-1. **Integer Exercise**:
-   ```java
-   class LightYear {
-       public static void main(String[] args) {
-           long lightspeed = 186000;
-           long days = 365;
-           long seconds = days * 24 * 60 * 60;
-           long distance = lightspeed * seconds;
-           System.out.println("In one year, light travels " + distance + " miles.");
-       }
-   }
-   ```
+Integer Exercise:
+class LightYear {
+    public static void main(String[] args) {
+        long lightspeed = 186000;
+        long days = 365;
+        long seconds = days * 24 * 60 * 60;
+        long distance = lightspeed * seconds;
+        System.out.println("In one year, light travels " + distance + " miles.");
+    }
+}
 
-2. **Floating-Point Exercise**:
-   ```java
-   class AreaFloat {
-       public static void main(String[] args) {
-           float pi = 3.1416f;
-           float r = 5.5f;
-           float a = pi * r * r;
-           System.out.println("Area of circle is " + a);
-       }
-   }
-   ```
 
-3. **Character Exercise**:
-   ```java
-   class CharIncrement {
-       public static void main(String[] args) {
-           char ch = 'A';
-           for (int i = 0; i < 5; i++) ch++;
-           System.out.println("Final character: " + ch);
-       }
-   }
-   ```
+Floating-Point Exercise:
+class AreaFloat {
+    public static void main(String[] args) {
+        float pi = 3.1416f;
+        float r = 5.5f;
+        float a = pi * r * r;
+        System.out.println("Area of circle is " + a);
+    }
+}
 
-4. **Boolean Exercise**:
-   ```java
-   class EvenCheck {
-       public static void main(String[] args) {
-           int num = 42;
-           boolean isEven = (num % 2 == 0);
-           System.out.println(num + " is even: " + isEven);
-       }
-   }
-   ```
 
-5. **Literals Exercise**:
-   ```java
-   class Literals {
-       public static void main(String[] args) {
-           int num = 123_456;
-           double d = 1_234.56;
-           boolean b = true;
-           char c = '\n';
-           String s = "Hello\nWorld";
-           System.out.println("Int: " + num + ", Double: " + d + ", Boolean: " + b + ", Char: " + c + "String: " + s);
-       }
-   }
-   ```
+Character Exercise:
+class CharIncrement {
+    public static void main(String[] args) {
+        char ch = 'A';
+        for (int i = 0; i < 5; i++) ch++;
+        System.out.println("Final character: " + ch);
+    }
+}
 
-6. **Dynamic Initialization Exercise**:
-   ```java
-   class SphereVolume {
-       public static void main(String[] args) {
-           double r = 5.0;
-           double volume = (4.0 / 3.0) * Math.PI * r * r * r;
-           System.out.println("Volume of sphere: " + volume);
-       }
-   }
-   ```
 
-7. **Scope Exercise**:
-   ```java
-   class ScopeLoop {
-       public static void main(String[] args) {
-           for (int i = 0; i < 3; i++) {
-               int counter = 0;
-               System.out.println("Counter: " + counter);
-               counter = 100;
-               System.out.println("Counter now: " + counter);
-           }
-       }
-   }
-   ```
+Boolean Exercise:
+class EvenCheck {
+    public static void main(String[] args) {
+        int num = 42;
+        boolean isEven = (num % 2 == 0);
+        System.out.println(num + " is even: " + isEven);
+    }
+}
 
-8. **Type Conversion Exercise**:
-   ```java
-   class CastDemo {
-       public static void main(String[] args) {
-           double d = 1234.5678;
-           int i = (int) d;
-           byte b = (byte) d;
-           System.out.println("Double: " + d + ", Int: " + i + ", Byte: " + b);
-       }
-   }
-   ```
 
-9. **Type Promotion Exercise**:
-   ```java
-   class PromoteExpr {
-       public static void main(String[] args) {
-           byte b = 10;
-           short s = 20;
-           char c = 'a';
-           int result = (b * s) / c;
-           System.out.println("Result: " + result);
-       }
-   }
-   ```
+Literals Exercise:
+class Literals {
+    public static void main(String[] args) {
+        int num = 123_456;
+        double d = 1_234.56;
+        boolean b = true;
+        char c = '\n';
+        String s = "Hello\nWorld";
+        System.out.println("Int: " + num + ", Double: " + d + ", Boolean: " + b + ", Char: " + c + "String: " + s);
+    }
+}
 
-10. **Array Exercise**:
-    ```java
-    class ArraySum {
-        public static void main(String[] args) {
-            int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-            int sum = 0;
-            for (int num : nums) sum += num;
-            double avg = (double) sum / nums.length;
-            System.out.println("Sum: " + sum + ", Average: " + avg);
+
+Dynamic Initialization Exercise:
+class SphereVolume {
+    public static void main(String[] args) {
+        double r = 5.0;
+        double volume = (4.0 / 3.0) * Math.PI * r * r * r;
+        System.out.println("Volume of sphere: " + volume);
+    }
+}
+
+
+Scope Exercise:
+class ScopeLoop {
+    public static void main(String[] args) {
+        for (int i = 0; i < 3; i++) {
+            int counter = 0;
+            System.out.println("Counter: " + counter);
+            counter = 100;
+            System.out.println("Counter now: " + counter);
         }
     }
-    ```
+}
 
-11. **Multidimensional Array Exercise**:
-    ```java
-    class MatrixSum {
-        public static void main(String[] args) {
-            int[][] m = new int[3][3];
-            for (int i = 0; i < 3; i++)
-                for (int j = 0; j < 3; j++)
-                    m[i][j] = i + j;
-            for (int i = 0; i < 3; i++) {
-                for (int j = 0; j < 3; j++)
-                    System.out.print(m[i][j] + " ");
-                System.out.println();
-            }
+
+Type Conversion Exercise:
+class CastDemo {
+    public static void main(String[] args) {
+        double d = 1234.5678;
+        int i = (int) d;
+        byte b = (byte) d;
+        System.out.println("Double: " + d + ", Int: " + i + ", Byte: " + b);
+    }
+}
+
+
+Type Promotion Exercise:
+class PromoteExpr {
+    public static void main(String[] args) {
+        byte b = 10;
+        short s = 20;
+        char c = 'a';
+        int result = (b * s) / c;
+        System.out.println("Result: " + result);
+    }
+}
+
+
+Array Exercise:
+class ArraySum {
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int sum = 0;
+        for (int num : nums) sum += num;
+        double avg = (double) sum / nums.length;
+        System.out.println("Sum: " + sum + ", Average: " + avg);
+    }
+}
+
+
+Multidimensional Array Exercise:
+class MatrixSum {
+    public static void main(String[] args) {
+        int[][] m = new int[3][3];
+        for (int i = 0; i < 3; i++)
+            for (int j = 0; j < 3; j++)
+                m[i][j] = i + j;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++)
+                System.out.print(m[i][j] + " ");
+            System.out.println();
         }
     }
-    ```
+}
 
-12. **Type Inference Exercise**:
-    ```java
-    class VarArray {
-        public static void main(String[] args) {
-            var nums = new double[]{1.1, 2.2, 3.3, 4.4, 5.5};
-            var sum = 0.0;
-            for (var num : nums) sum += num;
-            System.out.println("Sum: " + sum);
-        }
+
+Type Inference Exercise:
+class VarArray {
+    public static void main(String[] args) {
+        var nums = new double[]{1.1, 2.2, 3.3, 4.4, 5.5};
+        var sum = 0.0;
+        for (var num : nums) sum += num;
+        System.out.println("Sum: " + sum);
     }
-    ```
-```
+}
+
+
+
+
